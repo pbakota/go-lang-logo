@@ -1,0 +1,23 @@
+# This example will draw heart
+
+paper black
+ink white
+home
+
+left 180
+pen down
+
+
+left 140
+forward 130
+repeat 200
+	right 1
+	forward 1
+loop
+
+left 120
+repeat 200
+	right 1
+	forward 1
+loop
+forward 130

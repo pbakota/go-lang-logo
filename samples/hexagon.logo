@@ -1,0 +1,12 @@
+# This example will draw hexagon
+
+paper black
+ink white
+home
+
+pen down
+
+repeat 6
+	forward 100
+	right 60
+loop

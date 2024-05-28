@@ -1,0 +1,26 @@
+
+paper black
+ink white
+home
+
+repeat 6
+	pen down
+	forward 100
+	pen up
+	back 50
+	left 30
+	pen down
+	forward 50
+	pen up
+	back 50
+	right 60
+	pen down
+	forward 50
+
+	pen up
+	back 50
+	left 30
+	back 50
+
+	left 60
+loop
