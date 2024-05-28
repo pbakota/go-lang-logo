@@ -120,8 +120,8 @@ func penCmd(r *Runtime) {
 func forwardCmd(r *Runtime) {
 	r.trace("FORWARD")
 	step := r.getParam(TkNumber).Number
-	dx := int32(math.Round(float64(step) * math.Cos(r.DegToRad(r.Angle))))
-	dy := int32(math.Round(float64(step) * math.Sin(r.DegToRad(r.Angle))))
+	dx := int32(float64(step) * math.Cos(r.DegToRad(r.Angle)))
+	dy := int32(float64(step) * math.Sin(r.DegToRad(r.Angle)))
 
 	if r.PenDown {
 		r.Stub.DrawLine(r, r.Head.X, r.Head.Y, r.Head.X+dx, r.Head.Y+dy)

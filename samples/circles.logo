@@ -8,7 +8,7 @@ forward 150
 left 90
 
 pen down
-repeat 24
+repeat 28
 	# Draw a circle
 	repeat 24
 		forward 15

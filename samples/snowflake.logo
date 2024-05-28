@@ -3,7 +3,7 @@ paper black
 ink white
 home
 
-repeat 6 
+repeat 6
     pen down
 	forward 100
 	pen up
