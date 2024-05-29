@@ -1,7 +1,6 @@
-# Extremely basic turtle graphics interpreter, written in Go
+# Extremely basic turtle graphics interpreter & compiler, written in Go
 
-This is my attempt to write a simplistic language interpreter in Go yet with some basic use-case. The turtle graphics interpreter was born. 
-
+This is my attempt to write a simplistic language interpreter and possibly compiler in Go yet with some basic use-case. This is how the turtle graphics interpreter/compiler was born.
 
 ## The keywords
 
@@ -13,7 +12,7 @@ The available keywords (with the parameters) are here:
 - **paper** <black|white|red|green|blue|yellow|gray|magenta>
 - **ink** <black|white|red|green|blue|yellow|gray|magenta>
 - **pen** <down|up>
-- **repeat** \<number> \<statemets> loop
+- **repeat** \<number> \<statemets> **loop**
 - **forward** \<number>
 - **back** \<number>
 - **left** \<number>
@@ -78,6 +77,25 @@ Heart
 Circles
 
 ![](figures/2024-05-28_14-57.png)
+
+
+## The compiler
+
+There is also a very basic compiler for HTML5 canvas and JavaScript. If you compare the interpreter and the compiler, you will find that they are very similar.
+
+To build the compiler (uses GNU make)
+
+```
+make
+```
+
+To compile the source code to HTML5, use the command
+
+```
+cat samples/circles.logo | ./logo-compiler > output.html
+```
+
+Then you can view the output from any modern browser.
 
 
 ---

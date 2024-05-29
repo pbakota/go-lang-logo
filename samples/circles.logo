@@ -1,7 +1,7 @@
 # This example will draw circles
 
 paper black
-ink green
+ink white
 home
 
 forward 150
