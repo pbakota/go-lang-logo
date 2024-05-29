@@ -20,7 +20,7 @@ type NullDraw struct {
 	DrawingStub
 }
 
-func NewNullInterpreter() *NullDraw {
+func NewNullDraw() *NullDraw {
 	return &NullDraw{}
 }
 
@@ -248,7 +248,7 @@ func (r *Runtime) pop() int {
 
 func NewRuntime() *Runtime {
 	return &Runtime{
-		Stub:    NewNullInterpreter(),
+		Stub:    NewNullDraw(),
 		PC:      0,
 		SP:      0,
 		Head:    Position{X: 320, Y: 240},

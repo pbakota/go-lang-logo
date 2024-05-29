@@ -112,7 +112,7 @@ func main() {
 
 	c := logo.NewCompiler(writer)
 	// c.Trace = true
-	err = c.Run(string(source))
+	err = c.Compile(string(source))
 	if err != nil {
 		panic(err)
 	}

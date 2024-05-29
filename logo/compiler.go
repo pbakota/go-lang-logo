@@ -177,7 +177,7 @@ func (c *Compiler) emit(format string, args ...any) {
 	}
 }
 
-func (c *Compiler) Run(program string) error {
+func (c *Compiler) Compile(program string) error {
 	l := NewLexer(program)
 	// l.Debug = true
 	c.Program = []ProgramStep{}
@@ -206,7 +206,7 @@ func (c *Compiler) Run(program string) error {
 		}
 	}
 
-	// Running the program
+	// Compile the program
 	c.PC = 0 // reset
 	for {
 		p := c.next()
