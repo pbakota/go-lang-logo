@@ -1,7 +1,7 @@
 # This example will draw heart
 
 paper black
-ink white
+ink red
 home
 
 left 180
@@ -10,12 +10,14 @@ pen down
 
 left 140
 forward 130
+ink red
 repeat 200
 	right 1
 	forward 1
 loop
 
 left 120
+ink yellow
 repeat 200
 	right 1
 	forward 1

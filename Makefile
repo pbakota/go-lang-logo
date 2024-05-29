@@ -2,7 +2,7 @@
 all: build
 
 build:
-	go build cmd/trace/logo-trace.go
+	go build cmd/compiler/logo-compiler.go
 	go build cmd/visual/logo-visual.go
 
 run:

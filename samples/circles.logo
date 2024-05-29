@@ -1,14 +1,14 @@
 # This example will draw circles
 
 paper black
-ink white
+ink green
 home
 
 forward 150
 left 90
 
 pen down
-repeat 28
+repeat 24
 	# Draw a circle
 	repeat 24
 		forward 15

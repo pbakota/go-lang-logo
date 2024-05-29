@@ -4,7 +4,7 @@ ink white
 home
 
 repeat 6
-    pen down
+	pen down
 	forward 100
 	pen up
 	back 50

@@ -53,15 +53,15 @@ func (v *Visual) DrawTurtle(r *logo.Runtime, size float64) {
 
 	t := r.DegToRad(r.Angle)
 	// Huh, too much  math :(
-	ax, ay := r.Head.X+int32(size*math.Cos(t)), r.Head.Y+int32(size*math.Sin(t))
-	px, py := r.Head.X+int32(size/8*math.Cos(t)), r.Head.Y+int32(size/8*math.Sin(t))
-	bx, by := r.Head.X+int32(size*math.Cos(t+2*math.Pi/3)), r.Head.Y+int32(size*math.Sin(t+2*math.Pi/3))
-	cx, cy := r.Head.X+int32(size*math.Cos(t-2*math.Pi/3)), r.Head.Y+int32(size*math.Sin(t-2*math.Pi/3))
+	ax, ay := r.Head.X+size*math.Cos(t), r.Head.Y+size*math.Sin(t)
+	px, py := r.Head.X+size/8*math.Cos(t), r.Head.Y+size/8*math.Sin(t)
+	bx, by := r.Head.X+size*math.Cos(t+2*math.Pi/3), r.Head.Y+size*math.Sin(t+2*math.Pi/3)
+	cx, cy := r.Head.X+size*math.Cos(t-2*math.Pi/3), r.Head.Y+size*math.Sin(t-2*math.Pi/3)
 
-	v.Renderer.DrawLine(ax, ay, bx, by)
-	v.Renderer.DrawLine(ax, ay, cx, cy)
-	v.Renderer.DrawLine(bx, by, cx, cy)
-	v.Renderer.DrawLine(ax, ay, px, py)
+	v.Renderer.DrawLine(int32(ax), int32(ay), int32(bx), int32(by))
+	v.Renderer.DrawLine(int32(ax), int32(ay), int32(cx), int32(cy))
+	v.Renderer.DrawLine(int32(bx), int32(by), int32(cx), int32(cy))
+	v.Renderer.DrawLine(int32(ax), int32(ay), int32(px), int32(py))
 }
 
 func (v *Visual) Clear(r *logo.Runtime) {

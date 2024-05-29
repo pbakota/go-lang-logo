@@ -28,7 +28,7 @@ func (i *NullDraw) DrawLine(r *Runtime, x1, y1, x2, y2 int32) {}
 func (i *NullDraw) Clear(r *Runtime)                          {}
 
 type Position struct {
-	X, Y int32
+	X, Y float64
 }
 
 type ProgramStep struct {
@@ -120,11 +120,11 @@ func penCmd(r *Runtime) {
 func forwardCmd(r *Runtime) {
 	r.trace("FORWARD")
 	step := r.getParam(TkNumber).Number
-	dx := int32(float64(step) * math.Cos(r.DegToRad(r.Angle)))
-	dy := int32(float64(step) * math.Sin(r.DegToRad(r.Angle)))
+	dx := float64(step) * math.Cos(r.DegToRad(r.Angle))
+	dy := float64(step) * math.Sin(r.DegToRad(r.Angle))
 
 	if r.PenDown {
-		r.Stub.DrawLine(r, r.Head.X, r.Head.Y, r.Head.X+dx, r.Head.Y+dy)
+		r.Stub.DrawLine(r, int32(r.Head.X), int32(r.Head.Y), int32(r.Head.X+dx), int32(r.Head.Y+dy))
 	}
 
 	r.Head.X += dx
@@ -134,11 +134,11 @@ func forwardCmd(r *Runtime) {
 func backCmd(r *Runtime) {
 	r.trace("BACK")
 	step := r.getParam(TkNumber).Number
-	dx := int32(float64(step) * math.Cos(r.DegToRad(r.Angle)))
-	dy := int32(float64(step) * math.Sin(r.DegToRad(r.Angle)))
+	dx := float64(step) * math.Cos(r.DegToRad(r.Angle))
+	dy := float64(step) * math.Sin(r.DegToRad(r.Angle))
 
 	if r.PenDown {
-		r.Stub.DrawLine(r, r.Head.X, r.Head.Y, r.Head.X-dx, r.Head.Y-dy)
+		r.Stub.DrawLine(r, int32(r.Head.X), int32(r.Head.Y), int32(r.Head.X-dx), int32(r.Head.Y-dy))
 	}
 
 	r.Head.X -= dx
